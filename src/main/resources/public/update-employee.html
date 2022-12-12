@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Update Employee</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="crud.js"></script>
+    <script>
+        onload=function(){const data= JSON.parse(sessionStorage.getItem('userObject'))
+        document.getElementById("eid").value=data.eid;
+        document.getElementById("name").value=data.name;
+        document.getElementById("email").value=data.email;
+        document.getElementById("address").value=data.address;
+        document.getElementById("phone").value=data.phone;
+    }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Employee Management</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="list-employee.html">Show Employee</a></li>
+                <li><a href="add-employee.html">Add Employee</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <form>
+            <div class="form-group">
+                <label for="eid">EID:</label>
+                <input disabled="disabled" type="text" class="form-control" id="eid">
+              </div>
+    
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+    
+            <div class="form-group">
+              <label for="email">Email address:</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+              <label for="address">Address:</label>
+              <input type="textarea" class="form-control" id="address">
+            </div>
+    
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="textarea" class="form-control" id="phone">
+              </div>
+    
+            <button onclick="updateEmployee()" class="btn btn-default">Update Employee</button>
+          </form>
+    
+          </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
